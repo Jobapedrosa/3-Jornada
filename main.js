@@ -1,14 +1,16 @@
-/*function tocaSomAplausos(){
+function tocaSomAplausos(){
     document.querySelector("#som_tecla_aplausos").play();
     }
-
-document.querySelector(".tecla_aplausos").onclick = tocaSomAplausos; */  
-
-while(contador < listaDeTeclas.length){
-    const efeito = listaDeTeclas[contador].classList[1];
-    const idAudio = "#som_"+efeito;
-    listaDeTeclas[contador].onclick = function (){
-        tocaSom(idAudio);
+function tocaSomVaia(){
+    document.querySelector("#som_tecla_vaia").play();
     }
-    contador = contador + 1;
-}
+function tocaSomRisada(){
+    document.querySelector("#som_tecla_risada").play();
+
+    }                    
+
+const listaDeTeclas = document.querySelectorAll(".tecla");   
+listaDeTeclas[0].onclick = tocaSomAplausos;
+listaDeTeclas[1].onclick = tocaSomVaia;
+listaDeTeclas[2].onclick = tocaSomRisada;
+
